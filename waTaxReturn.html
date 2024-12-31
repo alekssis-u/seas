@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для нынешних клиентов</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/25de56bae3.js" crossorigin="anonymous"></script>
+    <script>
+        function redirectToForm() {
+            const selectedValue = document.querySelector('select[name="activity"]').value;
+            if (selectedValue === 'construction') {
+                window.location.href = 'tax_construction.html'; 
+            }
+            else if (selectedValue === 'transportation') {
+                window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSc3_rLjftepk5-ERKU6i2b_qRA4y0gfmTU0YXh68t1meagoDw/viewform?usp=sf_link'; 
+            }
+            else if (selectedValue === 'beauty') {
+                window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfOVuTHMEnN7K8G9noCyq1oh00fpvLira8mKcI77ePjzRacig/viewform?usp=sf_link'; 
+            }
+            else if (selectedValue === 'cleaning') {
+                window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSe8jGc7zEQd4YhvTUx3rf0OCIzNxPX0SBeoLaha0zNiKdKHYw/viewform?usp=sf_link'; 
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+            <form onsubmit="event.preventDefault(); redirectToForm();" class="login-form" >
+                <h2>Выберите Ваш род деятельности</h2>
+                <select name="activity">
+                    <option value="">--Выберите--</option>
+                    <option value="construction">Construction</option>
+                    <option value="transportation">Transportation/Delivery</option>
+                    <option value="beauty">Beauty</option>
+                    <option value="cleaning">Cleaning/Real Estate Agents</option>
+                </select>
+                <button type="submit">Далее</button>
+            </form>
+        </form>
+    </div>
+    
+</body>
+</html>
