@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для нынешних клиентов</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/25de56bae3.js" crossorigin="anonymous"></script>
+    <script>
+        function redirectToForm() {
+            const selectedValue = document.querySelector('select[name="activity"]').value;
+            if (selectedValue === 'waTaxReturn') {
+                window.location.href = 'waTaxReturn.html'; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+            <form onsubmit="event.preventDefault(); redirectToForm();" class="login-form" >
+                <h2>Какой вид услуг Вас интересует?</h2>
+                <select name="activity">
+                    <option value="">--Выберите--</option>
+                    
+                    <option value="waTaxReturn">Отчёт по доходам/WA Tax Return</option>
+                    
+                </select>
+                <button type="submit">Далее</button>
+            </form>
+        </form>
+    </div>    
+</body>
+</html>
